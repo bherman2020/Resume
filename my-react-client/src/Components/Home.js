@@ -33,6 +33,7 @@ export default function Home() {
                     <li><Link to="./AboutMe">About</Link></li>
                     <li><Link to="Projects">projects</Link></li>
                     <li><Link to="Contract">contact</Link></li>
+                    <h1>hello</h1>
                 </ul>
             </div>
             </nav>
