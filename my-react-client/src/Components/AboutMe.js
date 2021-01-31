@@ -4,6 +4,11 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ViewHeadlineIcon from '@material-ui/icons/ViewHeadline';
 import CloseIcon from '@material-ui/icons/Close';
+import { Link } from 'react-router-dom'
+import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
+import SportsBasketballIcon from '@material-ui/icons/SportsBasketball';
+import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
+import MusicNoteIcon from '@material-ui/icons/MusicNote';
 
 
 export default function AboutMe() {
@@ -48,10 +53,10 @@ export default function AboutMe() {
 
             {/*nav links */}
             <ul className="nav-links">
-            <li><a href="Home">home</a></li>
-            <li><a href="AboutMe">about</a></li>
-            <li><a href="Projects">projects</a></li>
-            <li><a href="Contact">contact</a></li>
+                <li><Link to="/">home</Link></li>
+                <li><Link to="/AboutMe">About</Link></li>
+                <li><Link to="/Projects">projects</Link></li>
+                <li><Link to="/Contact">contact</Link></li>
             </ul>
         </div>
         </nav>
@@ -64,10 +69,10 @@ export default function AboutMe() {
             <CloseIcon className="i"></CloseIcon>
             </button>
             <ul className="sidebar-links">
-                <li><a href="Home">home</a></li>
-                <li><a href="AboutMe">about</a></li>
-                <li><a href="Projects">projects</a></li>
-                <li><a href="Contract">contact</a></li>
+                    <li><Link to="/">home</Link></li>
+                    <li><Link to="/AboutMe">About</Link></li>
+                    <li><Link to="/Projects">projects</Link></li>
+                    <li><Link to="/Contact">contact</Link></li>
             </ul>
             <ul className="social-icons">
                 <li>
@@ -97,16 +102,25 @@ export default function AboutMe() {
 
             {/*about page */}
             <p>
-            Hello, I am Herman Bide  and I am a web developer.
+            Hello, I am Herman Bide  and I am a self-taught web developer.
             I spend most of my day, experimenting with HTML, CSS
-            and JavaScript (and its endless list of frameworks). I enjoy coding
-            and the challenge of learning something new everyday. You can also
-            find me at youtube channel
-            <a href="https://www.youtube.com/channel/UCMZFwxv5l-XtKi693qMJptA"
-                >coding addict</a
-            >
+            JavaScript Php all while using open-sources such as React and Node.js and using Express.js framework. 
+            I enjoy coding and the challenge of learning something new everyday. 
             </p>
         </div>
+
+        <div className="resume_item resume_hobby">
+                    <div className="section-title">
+                        <h2>Hobbies</h2>
+                    <div className="underline"></div>
+                    </div>
+                        <ul>
+                            <li><SportsEsportsIcon className="icon"/></li>
+                            <li><MusicNoteIcon className="icon"/></li>
+                            <li><SportsBasketballIcon className="icon"/></li>
+                            <li><FlightTakeoffIcon className="icon"/></li>
+                        </ul>
+                </div>
         </section>
 
 

@@ -3,13 +3,13 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ViewHeadlineIcon from '@material-ui/icons/ViewHeadline';
 import CloseIcon from '@material-ui/icons/Close';
+import { Link } from 'react-router-dom';
 
 
 
 
-function Porfolio() {
+function Contact() {
     return (
-            
   <body>
     {/* navbar */}
     <nav className="nav" id="nav">
@@ -23,10 +23,10 @@ function Porfolio() {
         </div>
         {/* nav links */}
         <ul className="nav-links">
-          <li><a href="Home">Home</a></li>
-          <li><a href="AboutMe">about</a></li>
-          <li><a href="Projects">projects</a></li>
-          <li><a href="Contact">contact</a></li>
+          <li><Link to="/">home</Link></li>
+          <li><Link to="/AboutMe">About</Link></li>
+          <li><Link to="/Projects">projects</Link></li>
+          <li><Link to="/Contact">contact</Link></li>
         </ul>
       </div>
     </nav>
@@ -38,10 +38,10 @@ function Porfolio() {
           <CloseIcon className="i"/>
         </button>
         <ul className="sidebar-links">
-          <li><a href="Home">home</a></li>
-          <li><a href="AboutMe">about</a></li>
-          <li><a href="Projects">projects</a></li>
-          <li><a href="Contact">contact</a></li>
+          <li><Link to="/">home</Link></li>
+          <li><Link to="/AboutMe">About</Link></li>
+          <li><Link to="/Projects">projects</Link></li>
+          <li><Link to="/Contact">contact</Link></li>
         </ul>
         <ul className="social-icons">
           {/* single item */}
@@ -59,9 +59,6 @@ function Porfolio() {
       </div>
     </aside>
 
-
-   
-
     <section className="section single-page">
       <div className="section-title">
         <h1>contact</h1>
@@ -72,11 +69,14 @@ function Porfolio() {
         {/* contact page */}
         <p>
           If you are looking to get ahold of me, you can send me an email at
-          <a href="mailto:email@email.com">@your_email</a>
+
+          <a href="herm.bide@gmail.com">herm.bide@gmail.com</a>
         </p>
         <p>
-          You can also reach me on Twitter at
-          <a href="https://www.twitter.com">@your_social_media </a>
+          You can also reach me on LinkedIn at 
+          <a href="https://www.linkedin.com/in/herman-bide/" className="social-icon"><br></br>
+            <LinkedInIcon className='i'/>
+            </a>
         </p>
       </div>
     </section>
@@ -87,37 +87,15 @@ function Porfolio() {
       <ul className="social-icons">
         {/* single item */}
         <li>
-          <a href="https://www.twitter.com" className="social-icon">
-            <i className="fab fa-facebook"></i>
-          </a>
+            <a href="https://www.linkedin.com/in/herman-bide/" className="social-icon" >
+            <LinkedInIcon className='i'/>
+            </a>
         </li>
-      
         {/* single item */}
         <li>
-          <a href="https://www.twitter.com" className="social-icon">
-            <i className="fab fa-linkedin"></i>
-          </a>
-        </li>
-     
-        {/* single item */}
-        <li>
-          <a href="https://www.twitter.com" className="social-icon">
-            <i className="fab fa-squarespace"></i>
-          </a>
-        </li>
-
-        {/* single item */}
-        <li>
-          <a href="https://www.twitter.com" className="social-icon">
-            <i className="fab fa-behance"></i>
-          </a>
-        </li>
-
-        {/* single item */}
-        <li>
-          <a href="https://www.twitter.com" className="social-icon">
-            <i className="fab fa-instagram"></i>
-          </a>
+            <a href="https://github.com/bherman2020" className="social-icon">
+                <GitHubIcon className="i"/>
+            </a>
         </li>
       </ul>
 
@@ -129,4 +107,4 @@ function Porfolio() {
     )
 }
 
-export default Porfolio;
+export default Contact;

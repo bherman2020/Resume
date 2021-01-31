@@ -74,7 +74,7 @@ export default function Resume() {
                             <li>
                                 <div className="skill_name">Javascript</div>
                             </li>
-{/* 
+                            {/* 
                             <li>
                                 <div className="skill_progress">
                                     <span id='style' style={{width: '50%'}}></span>
@@ -217,8 +217,6 @@ export default function Resume() {
                                 <li><FlightTakeoffIcon className="icon"/></li>
                             </ul>
                     </div>  
-                
-
                 </div>
         </div>
     )

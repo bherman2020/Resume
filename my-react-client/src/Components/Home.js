@@ -1,5 +1,8 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './Home.css';
+import AboutMe from './AboutMe';
+import Contact from './Contact';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -8,32 +11,43 @@ import CloseIcon from '@material-ui/icons/Close';
 import CodeIcon from '@material-ui/icons/Code';
 import BrushIcon from '@material-ui/icons/Brush';
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
+import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
+import SportsBasketballIcon from '@material-ui/icons/SportsBasketball';
+import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
+import MusicNoteIcon from '@material-ui/icons/MusicNote';
 
 
 
 export default function Home() {
-        return (
+    <>
+    <Router> 
+        <Switch>
+         <Route path='/AboutMe' component={AboutMe} />
+         <Route path='/Contact' component={Contact} />
+        </Switch>
+    </Router>  
+  </>    
+    return (
             
         <body>
-
             {/*navbar */}
             <nav className="nav" id="nav">
             <div className="nav-center">
 
                 {/*nav header */}
                 <div className="nav-header">
-                <img src="./images/laptop-code.jpg" className="nav-logo" alt="nav logo" />
+                <h1 className="nav-logo">HB</h1> 
                 <button className="nav-btn" id="nav-btn">
                     < ViewHeadlineIcon className="i"/>
                 </button>
                 </div>
                 {/* nav-links */}
                 <ul className="nav-links">
-                    <li><Link to="./">home</Link></li>
-                    <li><Link to="./AboutMe">About</Link></li>
-                    <li><Link to="Projects">projects</Link></li>
-                    <li><Link to="Contract">contact</Link></li>
-                    <h1>buy</h1>
+                    <li><Link to="/">home</Link></li>
+                    <li><Link to="/AboutMe">About</Link></li>
+                    <li><Link to="/Projects">projects</Link></li>
+                    <li><Link to="/Contact">contact</Link></li>
+                   
                 </ul>
             </div>
             </nav>
@@ -46,10 +60,10 @@ export default function Home() {
                 </button>
                 {/* nav-links */}
                 <ul className="sidebar-links">
-                    <li><a href="Home">home</a></li>
-                    <li><a href="AboutMe">about</a></li>
-                    <li><a href="Projects">projects</a></li>
-                    <li><a href="Contract">contact</a></li>
+                    <li><Link to="/">home</Link></li>
+                    <li><Link to="/AboutMe">About</Link></li>
+                    <li><Link to="/Projects">projects</Link></li>
+                    <li><Link to="/Contact">contact</Link></li>
                 </ul>
 
                 {/* social icons */}
@@ -93,32 +107,45 @@ export default function Home() {
 
                 </article>
                 <article className="hero-img">
-                <img src="./images/laptop-code.jpg" className="hero-photo" alt="herman bide" />
+                <img src=".src/images/Data.png" className="hero-photo" alt="herman bide" />
                 </article>
             </div>
             </header>
       
             {/* about */}
             <section className="section about">
-            <div className="section-center about-center">
-    
- 
-                {/* about info */}
-                <article className="about-info">
-                <div className="section-title about-title">
-                    <h2>About me</h2>
-                    <div className="underline"></div>
+                <div className="section-center about-center">
+                    {/* about info */}
+                    <article className="about-info">
+                        <div className="section-title about-title">
+                            <h2>About me</h2>
+                            <div className="underline"></div>
+                        </div>
+
+                        <p className='projects-text' >
+                            I am a self-taught web developer with hands on experience with designing, developing and maintaining web applications. 
+                            From the moment I started my first coding lesson I was hooked and found passion in trying to understand the science behind computer programing. 
+                            Web development has offered an engaging challenge to continually learn and improve my skills in creating high quality software. 
+                            Along with my experience, I have learned to collaborate well in collaborative environment. 
+                        </p><br/>
+                        <a href="AboutMe" className="btn">about me</a>
+                    </article>
+                
+
+                <div className="resume_item resume_hobby">
+                    <div className="section-title about-title">
+                        <h2>Hobbies</h2>
+                        <div className="underline"></div>
+                    </div>
+                        <ul>
+                            <li><SportsEsportsIcon className="icon"/></li>
+                            <li><MusicNoteIcon className="icon"/></li>
+                            <li><SportsBasketballIcon className="icon"/></li>
+                            <li><FlightTakeoffIcon className="icon"/></li>
+                        </ul>
+                </div>
                 </div>
 
-                <p className='projects-text'>
-                    I am an aspiring web developer with hands on experience of designing, developing and maintaining web applications. 
-                    From the moment I started my first coding lesson I was hooked and found passion in trying to create appealing websites.
-                    Web development has offered an engaging challenge to continually learn and improve my sills in creating high quality software. 
-                    Along with my experience in the field of healthcare I have learned to collaborate well in collaborative environment. 
-                </p><br/>
-                <a href="AboutMe" className="btn">about me</a>
-                </article>
-            </div>
             </section>
     
             {/* services */}
@@ -168,31 +195,31 @@ export default function Home() {
 
             {/* projects */}
             <section className="section projects">
-            <div className="section-title">
-                <h2>latest works</h2>
-                <div className="underline"></div>
-                <p className="projects-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-                repudiandae cupiditate ea facilis incidunt, non sapiente! Debitis
-                magnam, earum assumenda obcaecati cum quaerat facere ratione molestiae
-                dignissimos aliquid blanditiis architecto voluptates delectus
-                voluptate animi nulla! Autem explicabo perspiciatis officia ea.
-                </p>
-            </div>
+                <div className="section-title">
+                    <h2>latest works</h2>
+                    <div className="underline"></div>
+                    <p className="projects-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+                    repudiandae cupiditate ea facilis incidunt, non sapiente! Debitis
+                    magnam, earum assumenda obcaecati cum quaerat facere ratione molestiae
+                    dignissimos aliquid blanditiis architecto voluptates delectus
+                    voluptate animi nulla! Autem explicabo perspiciatis officia ea.
+                    </p>
+                </div>
 
-            <div className="section-center projects-center">
-                {/* single project */}
-                <a href="Projects" className="project-1">
-                <article className="project">
-                    <img
-                    src="./images/project-1.jpeg"
-                    alt="single project"
-                    className="project-img"
-                    />
-                    <div className="project-info">
-                    <h4>project title</h4>
-                    <p>client name</p>
-                    </div>
+                <div className="section-center projects-center">
+                    {/* single project */}
+                    <a href="Projects" className="project-1">
+                    <article className="project">
+                        <img
+                        src="./images/project-1.jpeg"
+                        alt="single project"
+                        className="project-img"
+                        />
+                        <div className="project-info">
+                        <h4>project title</h4>
+                        <p>client name</p>
+                        </div>
                 </article>
                 </a>
            
@@ -244,34 +271,6 @@ export default function Home() {
             </div>
             </section>
           
-            {/* connect */}
-            <section className="connect">
-            <video
-                controls
-                autoplay
-                muted
-                loop
-                className="video-container"
-                poster="./images/project-1.jpeg"
-            >
-                <source src="./videos/connect.mp4" type="video/mp4" />
-                Sorry, your browser does not support embedded videos
-            </video>
-
-            <div className="video-banner">
-                {/* section title */}
-                <div className="section-title">
-                <h2>let's get in touch</h2>
-                <div className="underline"></div>
-                </div>
-            
-                <p className="video-text">
-                Thank you for taking the time to view my portfolio,
-                if you would like to get in touch click the button below!
-                </p>
-                <a href="Contact" className="btn">contact me</a>
-            </div>
-            </section>
       
             {/* skills */}
             <section className="section skills">
